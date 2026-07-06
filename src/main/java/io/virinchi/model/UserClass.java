@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 //@annotations
-@Entity  // this needs to eb a database in db
+@Entity  // this needs to a table in db no usage
 public class UserClass
 {
     @Id // PRIMARY KEY
