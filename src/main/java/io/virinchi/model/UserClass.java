@@ -1,9 +1,6 @@
 package io.virinchi.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 //@annotations
 @Entity  // this needs to a table in db no usage
@@ -14,6 +11,18 @@ public class UserClass
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+
+    @ManyToOne
+    @JoinColumn(name="addressId")
+    private AddressClass addressClass;
+
+    public AddressClass getAddressClass() {
+        return addressClass;
+    }
+
+    public void setAddressClass(AddressClass addressClass) {
+        this.addressClass = addressClass;
+    }
 
     public int getId() {
         return id;

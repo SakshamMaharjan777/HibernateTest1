@@ -15,8 +15,12 @@
 
 
 
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create</property>
         <mapping class="io.virinchi.model.UserClass"/>
+        <mapping class="io.virinchi.model.PhoneClass"/>
+        <mapping class="io.virinchi.model.AddressClass"/>
+
+
 
     </session-factory>
 </hibernate-configuration>
